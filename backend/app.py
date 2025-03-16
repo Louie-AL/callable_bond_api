@@ -3,6 +3,8 @@ from flask_cors import CORS
 import logging
 from backend.database import init_db  # Import init_db
 from backend.services.bond_pricing import callable_convertible_bond_pricing, bond_price, generate_gbm
+from flask import jsonify
+import logging
 
 logging.basicConfig(level=logging.DEBUG, force=True)
 
@@ -62,6 +64,16 @@ def price_convertible_bond():
         face_value=data.get("face_value", 100)
     )
     return jsonify({"convertible_bond_price": price})
+
+#error handling
+
+@app.errorhandler(400)
+def bad_request(error):
+    return jsonify({"error": "Bad Request", "message": str(error)}), 400
+
+@app.errorhandler(500)
+def internal_error(error):
+    return jsonify({"error": "Internal Server Error", "message": str(error)}), 500
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
