@@ -5,7 +5,7 @@ This project is a Flask-based API for simulating financial instruments and prici
 
 ---
 
-## 🚀 Features
+## Features
 
 - Health check endpoint
 - Monte Carlo simulation of stock prices
@@ -30,7 +30,7 @@ This project is a Flask-based API for simulating financial instruments and prici
 
 ---
 
-## 📦 Setup
+## Setup
 
 ### Prerequisites
 
@@ -55,7 +55,7 @@ The server will start at `http://localhost:5000`.
 
 ---
 
-## 🔁 API Endpoints
+## API Endpoints
 
 ### Health Check
 
@@ -109,38 +109,15 @@ A JSON object containing simulated price paths.
 
 ---
 
-## 🛠 Technologies
+## Technologies
 
 - Python
 - Flask
 - NumPy / SciPy / Pandas
 - Monte Carlo Simulation
 
----
-
-## 📈 Future Work
-
-- Add support for stochastic interest rate models (e.g., CIR, Hull-White)
-- Expand convertible bond pricing logic
-- Front-end integration (via React or similar)
-- Docker support
-
----
-
-## 🤝 Contributions
-
-Contributions and suggestions are welcome! Feel free to open an issue or pull request.
-
----
-
-## 📄 License
+##  License
 
 MIT License
 
----
 
-## 🧠 Author
-
-- **Louie A.L.**
-
-Reach out on GitHub or LinkedIn for collaboration or questions.
